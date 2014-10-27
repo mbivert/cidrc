@@ -16,7 +16,7 @@ from Plan9's `/sys/src/libip/parseip.c`.
 Where network is either and IP address and a netmask, or a network
 in CIDR notation. Eg.
 
-    # ./cidrc 192.168.0.0/24
+    # ./cidrc conv 192.168.0.0/24
     192.168.0.0 255.255.255.0
     # ./cidrc conv `./cidrc conv 192.168.0.0/24`
     192.168.0.0/24
