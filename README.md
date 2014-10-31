@@ -3,7 +3,7 @@ Cdrc is a little tool to convert IP from/to cidr notation. It
 can also list all available IPs on a given network.
 
 The utils.c files contains various function to convert IPs
-back and and forth. Internal represatation (uchar *) in inspired
+back and and forth. Internal represatation (uchar \*) in inspired
 from Plan9's `/sys/src/libip/parseip.c`.
 
 # Usage
@@ -26,12 +26,12 @@ in CIDR notation. Eg.
 
 One can run tests through
 
-    # cc -g -W -Wall tests.c utis.c -o tests && ./tests
+    # cc -g -W -Wall tests.c utils.c -o tests && ./tests
 
-No output is good.
+No output means things went well.
 
 # TODO
-IPv6 in libcdrc.
+IPv6 in utils.c.
 
 We assume reasonable input in cdrc. Undefined results
 for non-sense inpute. Ensure no segfault and the-like on
@@ -39,4 +39,4 @@ special input however.
 
 Calculate ip/mask from a base IP and number of host.
 
-Clean around uchar/uint32_t.
+Clean around uchar/uint32\_t.

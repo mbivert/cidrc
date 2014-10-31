@@ -35,15 +35,9 @@ listips(int v, uchar *pip, uchar *pmask)
 	for (i = 0; i < v; i++)
 		maxip[i] = (pip[i] & pmask[i]) | ~pmask[i];
 
-	if (v == V4) {
-		for (n = ipv4num(pip); n <= ipv4num(maxip); n++)
-			printf("%s\n", ipstr(v, numipv4(n, tmp), ip));
-	}
-
-/*
-	printf("ip range: %s ", ipstr(v, pip, ip));
-	printf("- %s\n", ipstr(v, nip, ip));
-*/
+	if (v == V4)
+	for (n = ipv4num(pip); n <= ipv4num(maxip); n++)
+		printf("%s\n", ipstr(v, numipv4(n, tmp), ip));
 }
 
 int
